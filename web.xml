@@ -1,0 +1,30 @@
+<web-app>
+
+<servlet>
+ <servlet-name>Login</servlet-name>
+ <servlet-class>auth.LoginServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+ <servlet-name>Login</servlet-name>
+ <url-pattern>/login</url-pattern>
+</servlet-mapping>
+
+<servlet>
+ <servlet-name>ApplyLeave</servlet-name>
+ <servlet-class>faculty.ApplyLeaveServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+ <servlet-name>ApplyLeave</servlet-name>
+ <url-pattern>/applyLeave</url-pattern>
+</servlet-mapping>
+
+<servlet>
+ <servlet-name>ApproveLeave</servlet-name>
+ <servlet-class>admin.ApproveLeaveServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+ <servlet-name>ApproveLeave</servlet-name>
+ <url-pattern>/approveLeave</url-pattern>
+</servlet-mapping>
+
+</web-app>
