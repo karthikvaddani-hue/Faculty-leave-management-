@@ -1,48 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Faculty Leave Management System</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Faculty Management System</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+<!-- TOP BAR -->
+<div class="top-bar">
+    <span>A-</span>
+    <span>A</span>
+    <span>A+</span>
+    <a href="#">Skip Header</a>
+</div>
+
+<!-- HEADER -->
 <header class="header">
-    <h1>Faculty Leave Management System</h1>
-    <p>Project Navigation Index</p>
+    <div class="header-left">
+        <img src="https://via.placeholder.com/80" alt="Logo">
+        <h1>FACULTY MANAGEMENT SYSTEM</h1>
+    </div>
 </header>
 
-<section class="home">
-    <div class="home-card">
-        <h2>Authentication</h2>
-        <a class="btn" href="login.html">Faculty Login</a><br><br>
-        <a class="btn" href="admin-login.html">Admin / HOD Login</a>
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a href="#">Home</a>
+    <a href="#">Faculty</a>
+    <a href="#">Departments</a>
+    <a href="#">Leave Management</a>
+    <a href="#">Reports</a>
+    <a href="#">Login</a>
+</nav>
+
+<!-- BANNER -->
+<section class="banner">
+    <img src="https://via.placeholder.com/1200x300" alt="Banner">
+</section>
+
+<!-- NOTICE -->
+<div class="notice">
+    Download Faculty Leave Reports – Academic Year 2025–26
+    <span>Click Here</span>
+</div>
+
+<!-- TILES -->
+<section class="tiles">
+    <div class="tile brown">Notifications</div>
+    <div class="tile red">Examination Calendar</div>
+    <div class="tile maroon">Syllabus</div>
+    <div class="tile orange">Mock Tests</div>
+    <div class="tile purple">Keys & Objections</div>
+    <div class="tile blue">Selections</div>
+    <div class="tile green">Results</div>
+    <div class="tile grey">Response Sheet</div>
+</section>
+
+<!-- CONTENT -->
+<section class="content">
+    <div class="left-panel">
+        <button>Chairman’s Message</button>
+        <button>Direct Recruitment</button>
+        <button>Departmental Tests</button>
     </div>
 
-    <div class="home-card">
-        <h2>Dashboards</h2>
-        <a class="btn" href="faculty-dashboard.html">Faculty Dashboard</a><br><br>
-        <a class="btn" href="hod-dashboard.html">HOD Dashboard</a><br><br>
-        <a class="btn" href="admin-dashboard.html">Admin Dashboard</a>
+    <div class="center-panel">
+        <h2>Announcements</h2>
+        <marquee direction="up" scrollamount="3">
+            Faculty leave objections open till 31/01/2026 <br><br>
+            Annual academic report published <br><br>
+            New faculty registration enabled
+        </marquee>
     </div>
 
-    <div class="home-card">
-        <h2>Leave Management</h2>
-        <a class="btn" href="apply-leave.html">Apply Leave</a><br><br>
-        <a class="btn" href="leave-history.html">Leave History</a><br><br>
-        <a class="btn" href="approve-leave.html">Approve Leave</a>
-    </div>
-
-    <div class="home-card">
-        <h2>Reports</h2>
-        <a class="btn" href="reports.html">View Reports</a>
+    <div class="right-panel">
+        <h3>One Time Profile Registration</h3>
+        <p>Register once to access all services.</p>
     </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
-    © 2026 Faculty Leave Management System | Final Year Project
+    © 2026 Faculty Management System | Final Year Project
 </footer>
+
+<script>
+let fontSize=16;
+
+// Font size control
+document.querySelectorAll(".top-bar span").forEach(btn=>{
+    btn.onclick=()=>{
+        if(btn.innerText==="A+") fontSize+=2;
+        if(btn.innerText==="A-") fontSize-=2;
+        if(btn.innerText==="A") fontSize=16;
+        document.body.style.fontSize=fontSize+"px";
+    }
+});
+
+// Notice click
+document.querySelector(".notice span").onclick=()=>{
+    alert("Faculty Leave Reports download started!");
+};
+
+// Tiles click
+document.querySelectorAll(".tile").forEach(tile=>{
+    tile.onclick=()=>{
+        alert(tile.innerText+" section coming soon!");
+    }
+});
+
+// Buttons click
+document.querySelectorAll(".left-panel button").forEach(btn=>{
+    btn.onclick=()=>{
+        alert(btn.innerText+" page coming soon!");
+    }
+});
+</script>
 
 </body>
 </html>
-
