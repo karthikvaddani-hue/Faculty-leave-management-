@@ -5,36 +5,44 @@
   --text:#1a1a1a;
 }
 
-body.dark{
-  background:
-    linear-gradient(rgba(18,18,18,0.95), rgba(18,18,18,0.95)),
-    url("bg-campus.jpg");
+body::before{
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(245,246,248,0.92); /* light overlay */
+  z-index: -1;
+}
+body.dark::before{
+  background: rgba(18,18,18,0.92);
 }
 
 }
 body{
-  background:
-    linear-gradient(rgba(245,246,248,0.95), rgba(245,246,248,0.95)),
-    url("bg-campus.jpg");
-  background-size:cover;
-  background-position:center;
-  background-attachment:fixed;
-  color:var(--text);
-  font-family:"Segoe UI", Arial, sans-serif;
-  transition:0.3s;
+  min-height: 100vh;
+  margin: 0;
+
+  background-image: url("bg-campus.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--text);
 }
+
 
 /* ---------- HEADER ---------- */
 .header{
-  background:
-    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-    url("bg-campus.jpg");
-  background-size:cover;
-  background-position:center;
-  padding:70px 20px;
-  text-align:center;
-  color:white;
+  background: transparent;
+  padding: 70px 20px;
+  text-align: center;
+  color: white;
 }
+
 
 /* ---------- NAV ---------- */
 .navbar-brand{
