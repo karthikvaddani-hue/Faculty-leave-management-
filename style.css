@@ -10,9 +10,13 @@ body.dark{
   --card:#1e1e1e;
   --text:#eaeaea;
 }
-
 body{
-  background:var(--bg);
+  background:
+    linear-gradient(rgba(245,246,248,0.95), rgba(245,246,248,0.95)),
+    url("bg-campus.jpg");
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
   color:var(--text);
   font-family:"Segoe UI", Arial, sans-serif;
   transition:0.3s;
