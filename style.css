@@ -6,9 +6,11 @@
 }
 
 body.dark{
-  --bg:#121212;
-  --card:#1e1e1e;
-  --text:#eaeaea;
+  background:
+    linear-gradient(rgba(18,18,18,0.95), rgba(18,18,18,0.95)),
+    url("bg campus.jpg");
+}
+
 }
 body{
   background:
