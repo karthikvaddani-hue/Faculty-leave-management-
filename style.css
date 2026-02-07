@@ -24,7 +24,7 @@ body{
   min-height: 100vh;
   margin: 0;
 
-  background-image: url("bg-campus.jpg");
+ background-image: url("./bg-campus.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
