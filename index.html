@@ -3,35 +3,134 @@
 <head>
 <meta charset="UTF-8">
 <title>Faculty Management System</title>
-<link rel="stylesheet" href="css/style.css">
+
+<style>
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* BODY */
+body {
+    background: #f4f6f8;
+}
+
+/* TOP STRIP */
+.top-bar {
+    height: 35px;
+    background: #333;
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    background: #f2f2f2;
+}
+
+/* LEFT TEXT */
+.hero-text {
+    max-width: 55%;
+}
+
+.hero-text h3 {
+    letter-spacing: 2px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.hero-text h1 {
+    font-size: 56px;
+    color: #0096d6;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.apply-btn {
+    background: #f2c200;
+    padding: 12px 28px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+/* LOGIN BOX */
+.login-box {
+    background: #fff;
+    padding: 25px;
+    width: 300px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.15);
+}
+
+.login-box h2 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #0096d6;
+    color: #fff;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.admin-btn {
+    background: #333;
+}
+
+/* BOTTOM STRIP */
+.bottom-strip {
+    background: #f2c200;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+</style>
 </head>
+
 <body>
 
-<header class="hero">
+<div class="top-bar"></div>
+
+<section class="hero">
     <div class="hero-text">
         <h3>FROM CAMPUS TO DIGITAL WORKFLOW</h3>
-        <h1>FACULTY <span>MANAGEMENT</span></h1>
+        <h1>FACULTY MANAGEMENT</h1>
         <p>Leave Approval • Tracking • Notifications</p>
-        <a href="faculty-login.html" class="btn">APPLY LEAVE</a>
+        <a href="#" class="apply-btn">APPLY LEAVE</a>
     </div>
 
-    <div class="hero-form">
+    <div class="login-box">
         <h2>Quick Login</h2>
         <input type="text" placeholder="User ID">
         <input type="password" placeholder="Password">
-        <button onclick="loginFaculty()">Faculty Login</button>
-        <button onclick="loginAdmin()" class="admin-btn">Admin Login</button>
+        <button>Faculty Login</button>
+        <button class="admin-btn">Admin Login</button>
     </div>
-</header>
+</section>
 
-<footer class="courses">
-    <span>Apply Leave</span> |
-    <span>Approval</span> |
-    <span>Status</span> |
-    <span>History</span> |
-    <span>Email Notification</span>
-</footer>
+<div class="bottom-strip">
+    Apply Leave | Approval | Status | History | Email Notification
+</div>
 
-<script src="js/script.js"></script>
 </body>
 </html>
