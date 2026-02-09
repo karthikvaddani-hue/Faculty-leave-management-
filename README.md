@@ -1,40 +1,21 @@
-# Faculty Leave Management System
+# Faculty Management System
 
-A web-based application to manage faculty leave requests, approvals, and history in educational institutions.
-
----
-
-## Features
-- Faculty & Admin Login
-- Apply Leave
-- Leave History Tracking
-- Admin Approval / Rejection
-- Email Notification
-- Role-Based Access
-
----
-
-## Technologies Used
-- Frontend: HTML, CSS
-- Backend: Java (Servlets, JDBC)
-- Database: MySQL
-- Server: Apache Tomcat
-
----
+A web-based Faculty Leave Management System inspired by a university admission portal UI.
 
 ## Modules
 - Faculty Login
-- Admin Login
+- Admin / Consultant Login
 - Apply Leave
+- Approve / Reject Leave
+- Track Approval Status
 - Leave History
-- Leave Approval
-- Email Notification
+- Email Notification (Simulated)
 
----
+## Technologies
+- HTML5
+- CSS3
+- JavaScript
 
-## Database Tables
-- **faculty** (faculty_id, password, email)
-- **leaves** (faculty_id, leave_type, from_date, to_date, reason, status)
-
----
-
+## Note
+Email notifications are simulated using alerts.
+Backend integration can enable real emails.
