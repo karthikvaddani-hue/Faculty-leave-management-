@@ -2,128 +2,36 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Faculty Leave Management System</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- Bootstrap -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
-<!-- Custom CSS -->
-<link rel="stylesheet" href="style.css">
+<title>Faculty Management System</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary px-4">
-  <span class="navbar-brand">FLMS</span>
-  <div class="ms-auto">
-    <button class="btn btn-light btn-sm" onclick="toggleDark()">
-      <i class="bi bi-moon"></i>
-    </button>
-  </div>
-</nav>
-
-<!-- HEADER -->
-<section class="header">
-  <h1 class="fw-semibold">Faculty Leave Management System</h1>
-  <p class="mt-2">A centralized system for academic leave processing</p>
-</section>
-
-<!-- MODULES -->
-<section class="container my-5">
-  <h4 class="text-center text-primary mb-4">System Modules</h4>
-
-  <div class="row g-4">
-
-    <div class="col-md-4">
-      <div class="module">
-        <i class="bi bi-person-badge"></i>
-        <h6>Faculty Login</h6>
-        <p class="small">Secure authentication for faculty members</p>
-      </div>
+<header class="hero">
+    <div class="hero-text">
+        <h3>FROM CAMPUS TO DIGITAL WORKFLOW</h3>
+        <h1>FACULTY <span>MANAGEMENT</span></h1>
+        <p>Leave Approval • Tracking • Notifications</p>
+        <a href="faculty-login.html" class="btn">APPLY LEAVE</a>
     </div>
 
-    <div class="col-md-4">
-      <div class="module">
-        <i class="bi bi-person-gear"></i>
-        <h6>Admin / HOD Login</h6>
-        <p class="small">Leave approval and system control</p>
-      </div>
+    <div class="hero-form">
+        <h2>Quick Login</h2>
+        <input type="text" placeholder="User ID">
+        <input type="password" placeholder="Password">
+        <button onclick="loginFaculty()">Faculty Login</button>
+        <button onclick="loginAdmin()" class="admin-btn">Admin Login</button>
     </div>
+</header>
 
-    <div class="col-md-4">
-      <div class="module">
-        <i class="bi bi-calendar2-check"></i>
-        <h6>Apply Leave</h6>
-        <p class="small">Online leave request submission</p>
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <div class="module">
-        <i class="bi bi-clock-history"></i>
-        <h6>Leave History</h6>
-        <p class="small">Track previously applied leaves</p>
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <div class="module">
-        <i class="bi bi-check2-square"></i>
-        <h6>Approve / Reject Leave</h6>
-        <p class="small">Decision making by HOD / Admin</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- LOGIN SECTION -->
-<section class="container my-5">
-  <div class="row justify-content-center">
-    <div class="col-md-4">
-      <div class="form-box">
-        <h5 class="text-center mb-3">Faculty Login</h5>
-        <input type="email" class="form-control mb-3" placeholder="Email ID">
-        <input type="password" class="form-control mb-3" placeholder="Password">
-        <button class="btn btn-primary w-100">Login</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- APPLY LEAVE -->
-<section class="container my-5">
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-      <div class="form-box">
-        <h5 class="text-center mb-3">Apply Leave</h5>
-        <select class="form-control mb-3">
-          <option>Casual Leave</option>
-          <option>Sick Leave</option>
-          <option>On Duty</option>
-        </select>
-        <input type="date" class="form-control mb-3">
-        <input type="date" class="form-control mb-3">
-        <textarea class="form-control mb-3" placeholder="Reason for leave"></textarea>
-        <button class="btn btn-success w-100">Submit Request</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="bg-primary text-white text-center py-3 mt-5">
-  Faculty Leave Management System | Academic Project
+<footer class="courses">
+    <span>Apply Leave</span> |
+    <span>Approval</span> |
+    <span>Status</span> |
+    <span>History</span> |
+    <span>Email Notification</span>
 </footer>
 
-<script>
-function toggleDark(){
-  document.body.classList.toggle("dark");
-}
-</script>
-
+<script src="js/script.js"></script>
 </body>
 </html>
