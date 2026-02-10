@@ -1,1 +1,262 @@
-<style> /* Reset & base */ * { box-sizing: border-box; } body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Gradient with red, blue, and green */ background: linear-gradient(135deg, red, blue, green); min-height: 100vh; margin: 0; color: #333; display: flex; align-items: center; justify-content: center; padding: 20px; } /* Container styling */ .container, .box { background: #fff; width: 400px; max-width: 90vw; margin: 40px auto; padding: 30px 35px; border-radius: 15px; box-shadow: 0 15px 40px rgba(0,0,0,0.15); text-align: center; } h1, h2 { color: #0077b6; margin-bottom: 20px; font-weight: 700; letter-spacing: 1.2px; } p { margin-top: 10px; font-size: 1rem; color: #555; } /* Buttons container */ .buttons { margin-top: 30px; display: flex; justify-content: center; gap: 20px; } .buttons a { background: #f2c200; color: #000; font-weight: 700; text-decoration: none; padding: 15px 25px; border-radius: 12px; box-shadow: 0 6px 15px rgba(242, 194, 0, 0.4); transition: background 0.3s ease, transform 0.2s ease; } .buttons a:hover { background: #e6b800; transform: translateY(-3px); } /* Inputs, selects, textareas, buttons */ input, select, textarea, button { width: 100%; padding: 14px 15px; margin: 12px 0 18px; border-radius: 10px; border: 1.8px solid #a0a0a0; font-size: 1rem; font-weight: 500; transition: border-color 0.3s ease; } input:focus, select:focus, textarea:focus { outline: none; border-color: #0077b6; box-shadow: 0 0 8px #0077b6aa; } textarea { resize: vertical; min-height: 90px; } button { background: #4facfe; border: none; color: white; cursor: pointer; font-weight: 700; font-size: 1.1rem; padding: 14px 15px; border-radius: 12px; box-shadow: 0 6px 15px rgba(79, 172, 254, 0.5); transition: background 0.3s ease, transform 0.2s ease; } button:hover { background: #3aa7fe; transform: translateY(-3px); } /* Links in paragraphs */ p a { color: #0077b6; font-weight: 600; text-decoration: none; transition: color 0.3s ease; } p a:hover { color: #005f86; text-decoration: underline; } /* Menu styling */ .menu { max-width: 360px; margin: 20px auto; display: flex; flex-direction: column; gap: 15px; } .menu a { display: block; background: #0077b6; color: white; padding: 15px 18px; border-radius: 15px; font-weight: 700; text-decoration: none; box-shadow: 0 6px 15px rgba(0, 119, 182, 0.5); transition: background 0.3s ease, transform 0.2s ease; } .menu a:hover { background: #005f86; transform: translateY(-3px); } /* Table styling */ table { width: 90%; max-width: 800px; margin: 30px auto 40px; border-collapse: collapse; box-shadow: 0 10px 20px rgba(0,0,0,0.1); border-radius: 12px; overflow: hidden; } th, td { padding: 14px 20px; border-bottom: 1px solid #ddd; text-align: center; font-weight: 500; } th { background: #0077b6; color: white; font-weight: 700; letter-spacing: 0.05em; } tr:last-child td { border-bottom: none; } /* Status button styles */ .approve, .reject { padding: 8px 14px; font-weight: 700; border-radius: 10px; border: none; cursor: pointer; transition: background 0.3s ease, transform 0.2s ease; } .approve { background-color: #38a169; /* green */ color: white; } .approve:hover { background-color: #2f855a; transform: translateY(-2px); } .reject { background-color: #e53e3e; /* red */ color: white; } .reject:hover { background-color: #c53030; transform: translateY(-2px); } /* Status text */ .pending { color: #dd6b20; /* orange */ font-weight: 700; } .approved { color: #38a169; font-weight: 700; } /* Responsive */ @media(max-width: 450px) { .container, .box { width: 90vw; padding: 20px; } table { width: 100%; font-size: 14px; } .buttons { flex-direction: column; gap: 15px; } } </style>
+/* ==============================
+   RESET & BASE STYLES
+================================ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, red, blue, green);
+  min-height: 100vh;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* ==============================
+   CONTAINERS
+================================ */
+.container,
+.box {
+  background: #ffffff;
+  width: 400px;
+  max-width: 92vw;
+  margin: 40px auto;
+  padding: 30px 35px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ==============================
+   HEADINGS & TEXT
+================================ */
+h1,
+h2 {
+  color: #0077b6;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* ==============================
+   BUTTON GROUPS
+================================ */
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.buttons a {
+  background: #f2c200;
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 15px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(242, 194, 0, 0.4);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.buttons a:hover {
+  background: #e6b800;
+  transform: translateY(-3px);
+}
+
+/* ==============================
+   INPUTS & BUTTONS
+================================ */
+input,
+select,
+textarea,
+button {
+  width: 100%;
+  padding: 14px 15px;
+  margin: 12px 0 18px;
+  border-radius: 10px;
+  border: 1.8px solid #a0a0a0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #0077b6;
+  box-shadow: 0 0 8px #0077b6aa;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* MAIN ACTION BUTTON */
+button {
+  background: #4facfe;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(79, 172, 254, 0.5);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #3aa7fe;
+  transform: translateY(-3px);
+}
+
+/* ==============================
+   LINKS
+================================ */
+p a {
+  color: #0077b6;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+/* ==============================
+   MENU (DASHBOARD)
+================================ */
+.menu {
+  max-width: 360px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.menu a {
+  display: block;
+  background: #0077b6;
+  color: white;
+  padding: 15px 18px;
+  border-radius: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0, 119, 182, 0.5);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.menu a:hover {
+  background: #005f86;
+  transform: translateY(-3px);
+}
+
+/* ==============================
+   TABLE STYLES
+================================ */
+table {
+  width: 90%;
+  max-width: 850px;
+  margin: 30px auto;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+th,
+td {
+  padding: 14px 18px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background: #0077b6;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* ==============================
+   STATUS & ACTION BUTTONS
+================================ */
+.approve,
+.reject {
+  padding: 8px 14px;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  margin: 0 3px;
+}
+
+.approve {
+  background-color: #38a169;
+  color: white;
+}
+
+.approve:hover {
+  background-color: #2f855a;
+}
+
+.reject {
+  background-color: #e53e3e;
+  color: white;
+}
+
+.reject:hover {
+  background-color: #c53030;
+}
+
+/* STATUS TEXT */
+.pending {
+  color: #dd6b20;
+  font-weight: 700;
+}
+
+.approved {
+  color: #38a169;
+  font-weight: 700;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+================================ */
+@media (max-width: 480px) {
+  .container,
+  .box {
+    width: 95vw;
+    padding: 20px;
+  }
+
+  table {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
