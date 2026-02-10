@@ -1,11 +1,13 @@
 function showFacultyDashboard() {
   app.innerHTML = `
-    <h2 style="text-align:center;">Faculty Dashboard</h2>
-    <div class="menu">
-      <a href="#" onclick="showApplyLeave()">Apply Leave</a>
-      <a href="#" onclick="showLeaveStatus()">Leave Status</a>
-      <a href="#" onclick="showLeaveHistory()">Leave History</a>
-      <a href="#" onclick="showHome()">Logout</a>
+    <div class="faculty-dashboard box">
+      <h2>Faculty Dashboard</h2>
+      <div class="menu">
+        <a href="#" onclick="showApplyLeave()">Apply Leave</a>
+        <a href="#" onclick="showLeaveStatus()">Leave Status</a>
+        <a href="#" onclick="showLeaveHistory()">Leave History</a>
+        <a href="#" onclick="showHome()">Logout</a>
+      </div>
     </div>`;
 }
 
