@@ -1,5 +1,5 @@
 /* ==============================
-   RESET & BASE STYLES
+   RESET
 ================================ */
 * {
   box-sizing: border-box;
@@ -7,264 +7,148 @@
   padding: 0;
 }
 
+/* ==============================
+   PAGE BACKGROUND
+================================ */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, red, blue, green);
+  background: linear-gradient(135deg, #3a0ca3, #4361ee, #4cc9f0);
   min-height: 100vh;
-  color: #333;
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 20px;
+  align-items: center;
 }
 
 /* ==============================
-   CONTAINERS
+   COMMON BOX (WHITE)
 ================================ */
 .container,
 .box {
   background: #ffffff;
   width: 400px;
   max-width: 92vw;
-  margin: 40px auto;
-  padding: 30px 35px;
+  padding: 30px;
   border-radius: 15px;
   text-align: center;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 /* ==============================
-   HEADINGS & TEXT
+   HEADINGS
 ================================ */
 h1,
 h2 {
   color: #0077b6;
   margin-bottom: 20px;
   font-weight: 700;
-  letter-spacing: 1.2px;
-}
-
-p {
-  margin-top: 10px;
-  font-size: 1rem;
-  color: #555;
 }
 
 /* ==============================
-   BUTTON GROUPS
+   BUTTON GROUP (HOME)
 ================================ */
 .buttons {
-  margin-top: 30px;
   display: flex;
-  justify-content: center;
   gap: 20px;
+  justify-content: center;
+  margin-top: 25px;
 }
 
 .buttons a {
   background: #f2c200;
-  color: #000;
-  font-weight: 700;
-  text-decoration: none;
   padding: 15px 25px;
   border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(242, 194, 0, 0.4);
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.buttons a:hover {
-  background: #e6b800;
-  transform: translateY(-3px);
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
 }
 
 /* ==============================
-   INPUTS & BUTTONS
+   INPUTS
 ================================ */
 input,
 select,
 textarea,
 button {
   width: 100%;
-  padding: 14px 15px;
-  margin: 12px 0 18px;
+  padding: 12px;
+  margin: 10px 0;
   border-radius: 10px;
-  border: 1.8px solid #a0a0a0;
-  font-size: 1rem;
-  font-weight: 500;
+  border: 1.5px solid #aaa;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-  outline: none;
-  border-color: #0077b6;
-  box-shadow: 0 0 8px #0077b6aa;
-}
-
-textarea {
-  resize: vertical;
-  min-height: 90px;
-}
-
-/* MAIN ACTION BUTTON */
 button {
-  background: #4facfe;
-  border: none;
+  background: #0077b6;
   color: white;
-  cursor: pointer;
   font-weight: 700;
-  font-size: 1.1rem;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(79, 172, 254, 0.5);
-  transition: background 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
 }
 
 button:hover {
-  background: #3aa7fe;
-  transform: translateY(-3px);
+  background: #005f86;
 }
 
 /* ==============================
-   LINKS
-================================ */
-p a {
-  color: #0077b6;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-p a:hover {
-  text-decoration: underline;
-}
-
-/* ==============================
-   MENU (DASHBOARD)
+   FACULTY DASHBOARD MENU
 ================================ */
 .menu {
-  max-width: 360px;
-  margin: 20px auto;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
 .menu a {
-  display: block;
   background: #0077b6;
   color: white;
-  padding: 15px 18px;
-  border-radius: 15px;
-  font-weight: 700;
+  padding: 15px;
+  border-radius: 12px;
   text-decoration: none;
-  text-align: center;
-  box-shadow: 0 6px 15px rgba(0, 119, 182, 0.5);
-  transition: background 0.3s ease, transform 0.2s ease;
+  font-weight: 700;
+  box-shadow: 0 5px 15px rgba(0, 119, 182, 0.4);
 }
 
 .menu a:hover {
   background: #005f86;
-  transform: translateY(-3px);
 }
 
 /* ==============================
-   TABLE STYLES
+   TABLES
 ================================ */
 table {
-  width: 90%;
-  max-width: 850px;
-  margin: 30px auto;
+  width: 100%;
   border-collapse: collapse;
-  border-radius: 12px;
-  overflow: hidden;
-  background: #ffffff;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-}
-
-th,
-td {
-  padding: 14px 18px;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
+  margin-top: 20px;
 }
 
 th {
   background: #0077b6;
   color: white;
-  font-weight: 700;
-  letter-spacing: 0.05em;
+  padding: 12px;
 }
 
-tr:last-child td {
-  border-bottom: none;
+td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
 }
 
 /* ==============================
-   STATUS & ACTION BUTTONS
+   STATUS COLORS
 ================================ */
-.approve,
-.reject {
-  padding: 8px 14px;
-  font-weight: 700;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  font-size: 0.95rem;
-  margin: 0 3px;
-}
-
-.approve {
-  background-color: #38a169;
-  color: white;
-}
-
-.approve:hover {
-  background-color: #2f855a;
-}
-
-.reject {
-  background-color: #e53e3e;
-  color: white;
-}
-
-.reject:hover {
-  background-color: #c53030;
-}
-
-/* STATUS TEXT */
 .pending {
-  color: #dd6b20;
-  font-weight: 700;
+  color: orange;
+  font-weight: bold;
 }
 
 .approved {
-  color: #38a169;
-  font-weight: 700;
+  color: green;
+  font-weight: bold;
 }
 
 /* ==============================
-   RESPONSIVE DESIGN
+   RESPONSIVE
 ================================ */
 @media (max-width: 480px) {
   .container,
   .box {
-    width: 95vw;
-    padding: 20px;
+    width: 95%;
   }
-
-  table {
-    width: 100%;
-    font-size: 14px;
-  }
-
-  .buttons {
-    flex-direction: column;
-    gap: 15px;
-  }
-   .faculty-dashboard .menu a {
-  background: #1e293b;
-}
-
-.faculty-dashboard .menu a:hover {
-  background: #0f172a;
-}
-
 }
