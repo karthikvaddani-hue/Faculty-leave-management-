@@ -259,4 +259,12 @@ tr:last-child td {
     flex-direction: column;
     gap: 15px;
   }
+   .faculty-dashboard .menu a {
+  background: #1e293b;
+}
+
+.faculty-dashboard .menu a:hover {
+  background: #0f172a;
+}
+
 }
