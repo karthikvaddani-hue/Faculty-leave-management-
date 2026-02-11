@@ -1,20 +1,13 @@
-// Get main container
-const app = document.getElementById("app");
+const app = document.getElementById('app');
 
-// ================= HOME PAGE =================
 function showHome() {
-  app.innerHTML = `
-    <div class="hero">
-      <div class="hero-text">
-        <h3>FROM CAMPUS TO DIGITAL WORKFLOW</h3>
-        <h1>FACULTY <span>MANAGEMENT</span></h1>
-        <p>Leave Approval • Tracking • Notifications</p>
-        <button class="btn" onclick="showFacultyLogin()">Faculty Login</button>
-        <button class="btn admin-btn" onclick="showAdminLogin()">Admin Login</button>
-      </div>
-    </div>
-  `;
+    app.innerHTML = `
+    <div class="container">
+        <h1>Faculty Management System</h1>
+        <p>Leave Management & Approval Portal</p>
+        <button onclick="showFacultyLogin()">Faculty Login</button>
+        <button onclick="showAdminLogin()">Admin Login</button>
+    </div>`;
 }
 
-// ================= INITIAL LOAD =================
 showHome();
