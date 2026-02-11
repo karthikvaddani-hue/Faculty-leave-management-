@@ -1,46 +1,43 @@
-
 function showFacultyLogin() {
-  app.innerHTML = `
+    app.innerHTML = `
     <div class="box">
-      <h2>Faculty Login</h2>
-      <input id="facultyId" placeholder="Faculty ID">
-      <input id="facultyPass" type="password" placeholder="Password">
-      <button onclick="facultyLogin()">Login</button>
-      <p><a href="#" onclick="showHome()">Back</a></p>
+        <h2>Faculty Login</h2>
+        <input id="facultyId" type="text" placeholder="Faculty ID">
+        <input id="facultyPass" type="password" placeholder="Password">
+        <button onclick="facultyLogin()">Login</button>
+        <button onclick="showHome()">Back</button>
     </div>`;
 }
 
 function showAdminLogin() {
-  app.innerHTML = `
+    app.innerHTML = `
     <div class="box">
-      <h2>Admin / Consultant Login</h2>
-      <input id="adminId" placeholder="Admin ID">
-      <input id="adminPass" type="password" placeholder="Password">
-      <button onclick="adminLogin()">Login</button>
-      <p><a href="#" onclick="showHome()">Back</a></p>
+        <h2>Admin Login</h2>
+        <input id="adminId" type="text" placeholder="Admin ID">
+        <input id="adminPass" type="password" placeholder="Password">
+        <button onclick="adminLogin()">Login</button>
+        <button onclick="showHome()">Back</button>
     </div>`;
 }
 
 function facultyLogin() {
-  const id = facultyId.value.trim();
-  const pass = facultyPass.value.trim();
+    const id = document.getElementById('facultyId').value;
+    const pass = document.getElementById('facultyPass').value;
 
-  if (id === "faculty" && pass === "1234") {
-    alert("Faculty Logged In Successfully");
-    showFacultyDashboard();
-  } else {
-    alert("Invalid Faculty Credentials");
-  }
+    if (id === "faculty" && pass === "1234") {
+        showFacultyDashboard();
+    } else {
+        alert("Invalid Faculty Credentials");
+    }
 }
 
 function adminLogin() {
-  const id = adminId.value.trim();
-  const pass = adminPass.value.trim();
+    const id = document.getElementById('adminId').value;
+    const pass = document.getElementById('adminPass').value;
 
-  if (id === "admin" && pass === "1234") {
-    alert("Admin Logged In Successfully");
-    showAdminDashboard();
-  } else {
-    alert("Invalid Admin Credentials");
-  }
+    if (id === "admin" && pass === "1234") {
+        showAdminDashboard();
+    } else {
+        alert("Invalid Admin Credentials");
+    }
 }
