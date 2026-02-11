@@ -1,21 +1,33 @@
 # Faculty Management System
 
-A web-based Faculty Leave Management System inspired by a university admission portal UI.
+A modern Faculty Leave Management & Approval System.
 
-## Modules
+## Features
 - Faculty Login
-- Admin / Consultant Login
+- Admin Login
 - Apply Leave
-- Approve / Reject Leave
-- Track Approval Status
+- Leave Status
 - Leave History
-- Email Notification (Simulated)
+- Admin Approval System
 
-## Technologies
+## Default Credentials
+
+Faculty:
+ID: faculty
+Password: 1234
+
+Admin:
+ID: admin
+Password: 1234
+
+## How To Run
+
+1. Download the project.
+2. Open folder in VS Code.
+3. Open index.html in browser.
+4. Enjoy 🚀
+
+## Tech Used
 - HTML5
 - CSS3
-- JavaScript
-
-## Note
-Email notifications are simulated using alerts.
-Backend integration can enable real emails.
+- JavaScript (Vanilla)
